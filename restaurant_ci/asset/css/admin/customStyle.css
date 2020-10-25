@@ -1,0 +1,41 @@
+a:hover {
+    text-decoration: none;
+}
+
+.text-hidden {
+    width: 200px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.container-auto {
+    width: auto;
+}
+
+
+.c-alert-danger {
+    display: block;
+    padding-left: 7px;
+    color: #f14e4e;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.c-alert-create {
+    display: block;
+    color: #54f14e;
+    font-weight: 700;
+}
+
+
+/*datatables button cstom*/
+
+button.dt-button {
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+    color: #fff;
+    font-weight: 700;
+    background-color: #c9c9c9;
+    border-radius: 5px;
+}

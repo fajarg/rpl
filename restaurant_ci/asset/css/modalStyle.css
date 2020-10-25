@@ -1,0 +1,322 @@
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 200ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 2;
+}
+.overlay .cancel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+.c-modal,
+.c-modal input[type=text], 
+.c-modal input[type=number], 
+.c-modal input[type=password], 
+.c-modal input[type=date],
+.c-modal input[type=submit],
+.c-modal textarea,
+.c-modal a,
+.c-modal button,
+.c-modal img, 
+.select-modal,
+.checkmark {
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+         -o-border-radius: 5px;
+            border-radius: 5px;
+}
+
+.c-modal {
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+}
+
+
+.c-modal button{
+    border: none;
+    cursor: pointer;
+}
+
+.c-modal h2 {
+    padding: 10px 20px 0px 20px;
+    color: #07cdae;
+}
+.c-modal small {
+    margin-left: 20px;
+}
+.c-modal .m-content {
+    overflow: auto;
+    max-height: 400px;
+    padding: 10px 40px;
+}
+
+/*
+
+*/
+.c-modal .title-label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.c-modal b {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.c-modal b > span {
+    width: 50%;
+}
+
+.c-modal input[type=text] {
+    width: 100%;
+}
+
+.c-modal textarea {
+    font-family: inherit;
+    resize: none;
+    width: 100%;
+    height: 150px;
+}
+
+.c-modal input[type=number] {
+    width: 50%;
+}
+
+.c-modal input[type=text],
+.c-modal input[type=number],
+.c-modal input[type=password], 
+.c-modal input[type=date],
+.c-modal textarea, 
+.select-modal {
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 13pt;
+
+    -webkit-box-shadow: 0px 3px 10px rgba(65, 65, 65, 0.2);
+       -moz-box-shadow: 0px 3px 10px rgba(65, 65, 65, 0.2);
+            box-shadow: 0px 3px 10px rgba(65, 65, 65, 0.2);
+}
+
+.c-modal input[type=text]:hover, 
+.c-modal input[type=password]:hover, 
+.c-modal input[type=date]:hover {
+    outline: none;
+    color: var(--color-black);
+}
+
+.c-modal input[type=text]::-webkit-input-placeholder, 
+.c-modal textarea::-webkit-input-placeholder, 
+.c-modal input[type=password]::-webkit-input-placeholder {
+    color: #9b9b9b;
+}
+
+.c-modal input[type=submit] {
+    display: block;
+    width: 100%;
+    padding: 10px 50px;
+    margin: 10px;
+    font-size: 13pt;
+    background-color: red;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+
+    -webkit-box-shadow: 0px 3px 10px var(--shadow-color);
+       -moz-box-shadow: 0px 3px 10px var(--shadow-color);
+            box-shadow: 0px 3px 10px var(--shadow-color);
+}
+
+.m-flex {
+    display: flex;
+}
+
+.m-flex-modal {
+    display: flex;
+    flex-direction: column;
+}
+.m-flex-right{
+    justify-content: flex-end;
+}
+.c-modal img {
+    width: 200px;
+    object-fit: cover;
+    display: inline-block;
+
+    -webkit-box-shadow: 0px 3px 10px  rgba(65, 65, 65, 0.2);
+       -moz-box-shadow: 0px 3px 10px  rgba(65, 65, 65, 0.2);
+            box-shadow: 0px 3px 10px  rgba(65, 65, 65, 0.2);
+}
+
+.c-modal p {
+    vertical-align: top;
+    padding: 20px;
+    overflow: auto;
+    height: 200px;
+}
+
+.center-content {
+    max-width: 1000px;
+    text-align: center;
+}
+
+.m-content table {
+    font-size: 10pt;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+.c-modal p::-webkit-scrollbar {
+    width: 8px;
+}
+
+.c-modal p::-webkit-scrollbar-thumb {
+    background-color: var(--color-grey-3); 
+    -webkit-border-radius: 20px;
+       -moz-border-radius: 20px;
+            border-radius: 20px;
+}
+  
+.m-content th, .content td {
+    text-align: left;
+    padding: 8px;
+}
+
+.m-content tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+.m-content .btn-created,
+.m-content .btn-cancel {
+    padding: 10px 20px;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.m-content .btn-created{
+    background-image: linear-gradient(to right, #ffa56d, #f73e6f);
+    color: #fff;
+}
+.m-content .btn-cancel {
+    border: 1px solid #f73e6f;
+    color: #f73e6f;
+}
+
+.m-content .act-ed {
+    padding: 5px;
+    background-color: #6bb76d;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.m-content .act-de {
+    padding: 5px;
+    background-color: #eb203e;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.tambah input[type=text] {
+    padding: 5px !important; 
+}
+
+.ket-modal {
+    padding-left: 25px;
+    font-size: 1.2rem;
+}
+/*
+START CHECK BOX CUSTOM
+*/
+.container-checkmark {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-weight: 700;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container-checkmark input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container-checkmark:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container-checkmark input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container-checkmark input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container-checkmark .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 7px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+
+/*
+END CHECK BOX CUSTOM
+*/
